@@ -20,9 +20,9 @@ constructor(private http: HttpClient) { }
     return this.http.get<Trainer[]>(this.apiUrl);
   }
 
-gettrainersdetail(trainerid: number): Observable<Trainer[]>{
+gettrainersdetail(trainerid: number): Observable<Trainer>{
   const url = '${this.apiurl2}${trainerId}/trainers.json';
-  return this.http.get<Trainer[]>(this.apiurl2);
+  return this.http.get<Trainer>(url);
 }
 
 

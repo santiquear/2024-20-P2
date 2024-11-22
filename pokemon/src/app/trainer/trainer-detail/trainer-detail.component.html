@@ -1,8 +1,9 @@
-<div class="trainer-detail">
+<div class="trainer-detail" *ngIf="trainerDetail">
   <h2>{{ trainerDetail.name }}</h2>
-  <img [src]="trainerDetail.imageUrl" [alt]="trainerDetail.name" />
+  <img [src]="trainerDetail.imageUrl" alt="{{ trainerDetail.name }}" class="img-fluid mb-3" />
   <p><strong>Age:</strong> {{ trainerDetail.age }}</p>
-  <p><strong>About...</strong> {{ trainerDetail.bigSnopsies }}</p>
+  <p><strong>About:</strong> {{ trainerDetail.bigSnopsies }}</p>
   <p><strong>Pokemons:</strong></p>
   <app-pokemon-list [pokemonList]="trainerDetail.pokemons"></app-pokemon-list>
 </div>
+  
